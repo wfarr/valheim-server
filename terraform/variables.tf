@@ -37,6 +37,6 @@ variable "additional_metadata" {
   type        = map(string)
   description = "Additional metadata to attach to the instance"
   default = {
-    "startup-script" = "chmod ugo=rwx /mnt/disks/gce-containers-mounts/gce-persistent-disks/valheim"
+    "startup-script" = "mkdir -p /mnt/disks/gce-containers-mounts/gce-persistent-disks/valheim/worlds && chmod -R ugo=rwx /mnt/disks/gce-containers-mounts/gce-persistent-disks/valheim"
   }
 }
