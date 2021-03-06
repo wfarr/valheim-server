@@ -28,5 +28,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: gcr.io/${{ secrets.GCP_PROJECT_ID }}/valheim-server:latest
+        tags: us.gcr.io/${{ secrets.GCP_PROJECT_ID }}/valheim-server:latest
         context: docker
