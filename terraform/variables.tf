@@ -8,7 +8,7 @@ variable "dns_name" {
 
 variable "persistent_disk_name" {
   type    = string
-  default = "valheim-worlds"
+  default = "valheim"
 }
 
 variable "network" {
@@ -37,6 +37,6 @@ variable "additional_metadata" {
   type        = map(string)
   description = "Additional metadata to attach to the instance"
   default = {
-    "startup-script" = "mkdir -m ugo=rwx /mnt/disks/gce-containers-mounts/gce-persistent-disks/valheim-worlds"
+    "startup-script" = "chmod ugo=rwx /mnt/disks/gce-containers-mounts/gce-persistent-disks/valheim"
   }
 }

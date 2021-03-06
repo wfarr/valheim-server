@@ -39,7 +39,7 @@ module "gce-container" {
 
     volumeMounts = [
       {
-        mountPath = "/home/steam/.config/unity3d/IronGate/Valheim/worlds"
+        mountPath = "/home/steam/.config/unity3d/IronGate/Valheim"
         name      = var.persistent_disk_name
         readOnly  = false
       },
