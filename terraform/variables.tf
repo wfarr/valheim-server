@@ -1,3 +1,7 @@
+variable "project" {
+  type = string
+}
+
 variable "persistent_disk_name" {
   type    = string
   default = "valheim-worlds"

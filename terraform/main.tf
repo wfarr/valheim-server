@@ -2,13 +2,13 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "~> 3.58.0, <= 3.59.0"
+      version = "~> 3.58"
     }
   }
 }
 
 provider "google" {
-  project = "wfarr-valheim-server"
+  project = var.project
   region  = "us-east1"
 }
 
@@ -21,7 +21,7 @@ module "gce-container" {
   version = "~> 2.0"
 
   container = {
-    image = "us.gcr.io/wfarr-valheim-server/valheim-server:latest"
+    image = "us.gcr.io/${var.project}/valheim-server:latest"
     env = [
       {
         name  = "VALHEIM_SERVER_DISPLAY_NAME"
