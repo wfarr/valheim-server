@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 3.58.0, <= 3.59.0"
+    }
+  }
+}
+
 provider "google" {
   project = "wfarr-valheim-server"
   region  = "us-east1"
