@@ -2,12 +2,9 @@
 
 ## Deployment
 
-### Build and push docker image
+### Docker image
 
-```
-docker tag valheim-server us.gcr.io/${PROJECT_NAME}/valheim-server
-docker push us.gcr.io/${PROJECT_NAME}/valheim-server
-```
+GitHub Actions builds and pushes it on any merge to `main`.
 
 ### Terraform
 
