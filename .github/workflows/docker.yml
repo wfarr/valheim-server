@@ -2,7 +2,7 @@ name: docker
 
 on:
   push:
-    # - main
+  - main
 
 jobs:
   build-and-push:
