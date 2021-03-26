@@ -63,7 +63,7 @@ module "gce-container" {
 resource "google_compute_disk" "pd" {
   name = var.persistent_disk_name
   type = "pd-ssd"
-  size = 20
+  size = 50
   zone = var.zone
 }
 
