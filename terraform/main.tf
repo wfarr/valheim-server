@@ -74,6 +74,7 @@ resource "google_compute_instance" "valheim_server" {
   boot_disk {
     initialize_params {
       image = module.gce-container.source_image
+      size = 30
     }
   }
 
